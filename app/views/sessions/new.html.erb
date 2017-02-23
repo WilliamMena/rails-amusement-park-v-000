@@ -1,0 +1,9 @@
+<h1>Sign In!</h1>
+
+<%= form_for @user, url: sessions_path do %>
+  Name: <%= text_field_tag 'user[name]' %>
+  <br></br>
+  Password: <%= password_field_tag 'user[password]' %>
+  <br></br>
+  <%= submit_tag 'Sign In' %>
+<% end %>

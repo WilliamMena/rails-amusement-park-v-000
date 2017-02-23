@@ -1,0 +1,9 @@
+<h1>Attraction Index Page</h1>
+
+<% @attractions.each do |a| %>
+  <%= link_to "Go on #{a.name}", a if !current_user.admin? %>
+  <%= link_to "Show #{a.name}", a if current_user.admin? %>
+  <br></br>
+<% end %>
+
+<%= link_to 'New Attraction', new_attraction_path %>
